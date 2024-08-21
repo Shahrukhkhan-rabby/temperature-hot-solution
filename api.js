@@ -18,9 +18,10 @@ const displayTemperature = temperature => {
     const condition = temperature.weather[0].main;
     const iconCode = temperature.weather[0].icon;
     const iconUrl = `http://openweathermap.org/img/wn/${temperature.weather[0].icon}@2x.png`;
+    
 
     setInnerText('city', city);
-    setInnerText("temperature", `${tempCelsius}°C`);
+    setInnerText("temperature", `${tempCelsius}`);
     setInnerText("condition", condition);
     const imgIcon = document.getElementById('weather-icon');
     imgIcon.setAttribute('src', iconUrl)
